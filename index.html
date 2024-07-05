@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shubham Sharma</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Shubham Sharma">
+    <meta property="og:description" content="Experienced Backend Developer specializing in Node.js and RESTful APIs.">
+    <meta property="og:image" content="assets/images/profile.jpg">
+    <!-- Ensure this image is accessible and has correct path -->
+    <meta property="og:url" content="https://imshubhamofficial16.github.io/imshubhamofficial16/">
+    <!-- Replace with your website URL -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shubham Sharma">
+    <meta name="twitter:description" content="Experienced Backend Developer specializing in Node.js and RESTful APIs.">
+    <meta name="twitter:image" content="assets/images/profile.jpg">
+    <!-- Ensure this image is accessible and has correct path -->
+    <meta name="twitter:url" content="https://imshubhamofficial16.github.io/imshubhamofficial16/">
+    <!-- Replace with your website URL -->
+
+    <!-- Other Meta Tags and Links -->
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+
+</head>
+
+<body>
+    <header>
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto" onclick="sharePage()">
+            <img src="assets/images/share.svg" alt="share" class="btn-img"> SHARE
+        </button>
+
+        <script>
+            function sharePage() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    }).then(() => {
+                        console.log('Thanks for sharing!');
+                    }).catch((error) => {
+                        console.error('Error sharing:', error);
+                    });
+                } else {
+                    alert('Web Share API is not supported in your browser. Please copy the URL manually.');
+                }
+            }
+        </script>
+
+    </header>
+    <div class="content-wrapper">
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="assets/images/Profile.png" alt="profile">
+            </div>
+            <h1 class="profile-name">Shubham Sharma</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Software Developer</span>
+            </div>
+            <nav class="social-links">
+                <a href="https://www.facebook.com/shubham.krishnatray.3" class="social-link"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/SKrishnatray" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/imshubhamofficial16" class="social-link"><i class="fab fa-github"></i></a>
+            </nav>
+            <div class="widget">
+                <h5 class="widget-title">personal information</h5>
+                <div class="widget-content">
+                    <p>BIRTHDAY : 16 December 1998</p>
+                    <!-- <p>WEBSITE : www.example.com</p> -->
+                    <p>PHONE :<a href="tel:+919068080599"> +91 9068080599</a></p>
+                    <p>MAIL : <a href="mailto:imshubhamofficial@gmail.com">imshubhamofficial@gmail.com</a></p>
+                    <p>Location : Gurugram, India</p>
+                    <button class="btn btn-download-cv btn-primary rounded-pill" onclick="downloadPDF()">
+                        <img src="assets/images/download.svg" alt="download" class="btn-img">DOWNLOAD CV
+                    </button>
+
+                    <script>
+                        function downloadPDF() {
+                            const link = document.createElement('a');
+                            link.href = 'assets/shubham-sharma-SDEII.pdf';
+                            link.download = 'shubham-sharma-SDEII.pdf';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">LANGUAGES</h5>
+                        <p>English</p>
+                        <p>Hindi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">INTERESTS</h5>
+                        <p>Video games</p>
+                        <p>Cricket</p>
+                        <p>Music</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="intro-section">
+                <h2 class="section-title">Hello,</h2>
+                <p>I'm Shubham Sharma, a skilled Backend Developer with 3 years of expertise in Node.js, where I have
+                    successfully optimized server-side applications, reducing support issues by 40% and enhancing user
+                    satisfaction by 25%. Proficient in backend technologies, RESTful APIs, and database management, I
+                    contribute effectively to the full development life cycle and collaborate seamlessly with teams to
+                    deliver high-quality solutions.</p>
+                <a href="mailto:imshubhamofficial@gmail.com?subject=Opportunity%20to%20Collaborate&body=Dear%20Shubham,%0D%0A%0D%0AWe%20are%20interested%20in%20discussing%20a%20potential%20collaboration%20with%20you.%20Please%20reach%20out%20to%20us%20at%20your%20earliest%20convenience.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]%0D%0A[Your%20Company]"
+                    class="btn btn-primary btn-hire-me">
+                    HIRE ME
+                </a>
+
+            </section>
+            <section class="resume-section">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h6 class="section-subtitle">RESUME</h6>
+                        <h2 class="section-title">EDUCATION</h2>
+                        <ul class="time-line">
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2021 - 2019</span>
+                                <h6 class="time-line-item-title">Master In Computer Applications</h6>
+                                <p class="time-line-item-subtitle">DR. A.P.J Kalam Technical University, Lucknow U.P</p>
+                                <ul>
+                                    <li>
+                                        <p class="time-line-item-content">Ranked in Top 100.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2019 - 2016</span>
+                                <h6 class="time-line-item-title">Bachelor of Computer Applications</h6>
+                                <p class="time-line-item-subtitle">Ch Charan Singh University, Meerut</p>
+                                <ul>
+                                    <li>
+                                        <p class="time-line-item-content">Batch Topper in 2016-2019</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2016 - 2014</span>
+                                <h6 class="time-line-item-title">Intermediate (10 + 2)</h6>
+                                <p class="time-line-item-subtitle">Ved International School, Meerut</p>
+                                <ul>
+                                    <li>
+                                        <p class="time-line-item-content">Class Representative</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2014 - 2012</span>
+                                <h6 class="time-line-item-title">High School (10)</h6>
+                                <p class="time-line-item-subtitle">Vidya Academy Sr. Secondary School, Meerut</p>
+                                <ul>
+                                    <li>
+                                        <p class="time-line-item-content">2nd Ranked in Batch 2014</p>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Class Representative</p>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Sports & House Captain</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="section-subtitle">RESUME</h6>
+                        <h2 class="section-title">Experience</h2>
+                        <ul class="time-line">
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">Present - 11/2021</span>
+                                <h6 class="time-line-item-title">Software Development Engineer I</h6>
+                                <p class="time-line-item-subtitle">Innostax Software Labs Pvt. Ltd, Gurugram</p>
+                                <ul>
+                                    <li>
+                                        <p class="time-line-item-content">Led the Efforts with the largest development
+                                            team to develop the application
+                                            for flights and Hotel bookings.</p>
+                                        <ul>
+                                            <p class="time-line-item-content"><strong>TechStack: Nodejs, Postgres, Mongo
+                                            </p>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content"> Designed the Backend architecture and
+                                            flows.including working with the
+                                            Amadeus and TBO APIs</p>
+                                        <ul>
+                                            <p class="time-line-item-content"><strong>TechStack: Nodejs, ReacJS,
+                                                    Postgres, AWS.
+                                            </p>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Engineered a No-code application that creates
+                                            and provides backend
+                                            services, reducing time by 80% and costs by 68%.</p>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Collaborated on a project to integrate global
+                                            shopping and shipping channels
+                                            into a unified platform, aiming for a 25% cost-efficient and reliable
+                                            shipping
+                                            solution.</p>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Subsequently, led efforts that reduced
+                                            complexity by 32% and enhanced
+                                            customer satisfaction by 78%.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">11/2021 - 05/2021</span>
+                                <h6 class="time-line-item-title">Associate Software Engineer I</h6>
+                                <p class="time-line-item-subtitle">Innostax Software Labs Pvt. Ltd, Gurugram</p>
+                                <ul>
+                                    <li>
+                                        <p class="time-line-item-content">Promoted to Software Development Engineer I
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Contributed to the global shipping solution
+                                            for a Texas-based multinational
+                                            corporation by automating processes and integrating over 30
+                                            shopping/shipping channels.</p>
+                                        <ul>
+                                            <p class="time-line-item-content"><strong>TechStack: Nodejs, Jest.
+                                            </p>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Developed a project for a property tax
+                                            reduction firm, involving the migration
+                                            of the customer portal and Agent Portal 2.0.</p>
+                                    </li>
+                                    <li>
+                                        <p class="time-line-item-content">Additionally, enhanced the application and
+                                            addressed major bugs. Improved
+                                            accuracy by 98%</p>
+                                        <ul>
+                                            <p class="time-line-item-content"><strong>TechStack: .Net </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="services-section">
+                <h6 class="section-subtitle">WHAT I DO</h6>
+                <h2 class="section-title">SERVICES</h2>
+                <div class="row">
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/001-target.svg" alt="target">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Web designing</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/003-idea.svg" alt="bulb">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Content design</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/002-development.svg" alt="development">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Software Development</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services-section">
+                <h6 class="section-subtitle">WHAT I DO</h6>
+                <h2 class="section-title">Skills</h2>
+                <div class="row">
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/nodejs.svg" alt="target">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">NodeJs</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/expressjs.svg" alt="target">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">ExpressJs</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/js.svg" alt="bulb">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">JavaScript</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/typescript.svg" alt="development">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">TypeScript</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/feathersjs.svg" alt="development">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">FeathersJS</h5>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/nestjs.svg" alt="development">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">NestJs</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="achievements-section">
+                <h6 class="section-subtitle">WHAT I DO</h6>
+                <h2 class="section-title">ACHIEVEMENTS</h2>
+                <div class="achievement-cards-wrapper">
+                    <div class="media achievement-card">
+                        <img src="assets/images/trophy.svg" alt="puzzle" class="achievement-card-icon">
+                        <div class="media-body">
+                            <h4 class="achievement-card-title">Mentor of the Year, 2023-24</h4>
+                            <p class="achievement-card-description">Innostax Annual Awards</p>
+                        </div>
+                    </div>
+                    <div class="media achievement-card">
+                        <img src="assets/images/trophy.svg" alt="puzzle" class="achievement-card-icon">
+                        <div class="media-body">
+                            <h4 class="achievement-card-title">Mentor of the Quarter, Dec 2023</h4>
+                            <p class="achievement-card-description">Innostax Quarterly Awards</p>
+                        </div>
+                    </div>
+                    <div class="media achievement-card">
+                        <img src="assets/images/trophy.svg" alt="puzzle" class="achievement-card-icon">
+                        <div class="media-body">
+                            <h4 class="achievement-card-title">Ranked in the top 100 at AKTU University, 2021</h4>
+                            <p class="achievement-card-description">MCA</p>
+                        </div>
+                    </div>
+                    <div class="media achievement-card">
+                        <img src="assets/images/trophy.svg" alt="puzzle" class="achievement-card-icon">
+                        <div class="media-body">
+                            <h4 class="achievement-card-title">Topper of Batch, 2019</h4>
+                            <p class="achievement-card-description">BCA</p>
+                        </div>
+                    </div>
+                    <div class="media achievement-card">
+                        <img src="assets/images/trophy.svg" alt="puzzle" class="achievement-card-icon">
+                        <div class="media-body">
+                            <h4 class="achievement-card-title">2 Ranked in Batch, 2014</h4>
+                            <p class="achievement-card-description">High School</p>
+                        </div>
+                    </div>
+
+
+                    <div class="media achievement-card">
+                        <img src="assets/images/puzzle.svg" alt="puzzle" class="achievement-card-icon">
+                        <div class="media-body">
+                            <h4 class="achievement-card-title">Winner of Codebuzz in College</h4>
+                            <p class="achievement-card-description">Dewan Vs Group of Institutions</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>@ <a href="https://www.linkedin.com/in/skrishnatray/" target="_blank"
+                    rel="noopener noreferrer">ShubhamSharma</a>. All Rights Reserved <span id="current-year"></span>
+            <a href='http://www.freevisitorcounters.com'>freevisitorcounters</a>
+            <script type='text/javascript'
+                src='https://www.freevisitorcounters.com/auth.php?id=64e0ca08d27b9aa4fc1e2537fff2eeec945ad634'></script>
+                <script type="text/javascript"
+                src="https://www.freevisitorcounters.com/en/home/counter/1190816/t/5"></script>
+            </footer>
+            <script>
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
+
+        </main>
+
+    </div>
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/live-resume.js"></script>
+</body>
+
+</html>
