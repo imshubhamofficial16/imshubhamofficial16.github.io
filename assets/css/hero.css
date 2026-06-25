@@ -1,0 +1,170 @@
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
+.reveal.from-left{transform:translateX(-36px)}
+.reveal.from-right{transform:translateX(36px)}
+.reveal.revealed{opacity:1;transform:none}
+/* stagger siblings */
+.reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.22,1,.36,1)}
+.reveal-stagger.revealed > *{opacity:1;transform:none}
+
+/* Typewriter cursor */
+.tw-cur{display:inline-block;width:2px;height:1.1em;background:var(--vio-2);
+  vertical-align:-2px;margin-left:2px;animation:twblink .9s steps(1) infinite}
+@keyframes twblink{50%{opacity:0}}
+.hero-role{font-family:var(--mono);font-size:14px;color:var(--tx-2);margin-top:12px;
+  min-height:22px;display:flex;align-items:center;gap:4px}
+.hero-role .tw-verb{color:var(--cyan)}
+.hero-role .tw-obj{color:var(--tx)}
+
+/* Aurora / animated hero glow */
+@keyframes aurora{
+  0%  {transform:translate(0%,0%) scale(1)}
+  33% {transform:translate(4%,-6%) scale(1.08)}
+  66% {transform:translate(-3%,4%) scale(.96)}
+  100%{transform:translate(0%,0%) scale(1)}
+}
+.hero-aurora{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.aurora-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.18;animation:aurora 9s ease-in-out infinite}
+.aurora-blob:nth-child(1){width:520px;height:380px;background:var(--vio);top:-80px;right:-60px;animation-delay:0s}
+.aurora-blob:nth-child(2){width:380px;height:320px;background:var(--cyan);bottom:-60px;right:140px;animation-delay:-3s;opacity:.12}
+.aurora-blob:nth-child(3){width:300px;height:280px;background:var(--green);top:20px;right:320px;animation-delay:-6s;opacity:.09}
+html[data-theme="light"] .aurora-blob{opacity:.1}
+
+/* Counter */
+@keyframes countUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.stat-card.counted .stat-n{animation:countUp .5s ease forwards}
+
+/* Card tilt (applied via JS) */
+.proj{transition:.25s border-color,.25s box-shadow,.08s transform}
+.proj:hover{box-shadow:0 20px 60px -16px rgba(139,92,246,.35)}
+
+/* Chip stagger */
+.chips .chip{opacity:0;transform:translateY(10px);transition:opacity .35s ease,transform .35s ease,border-color .15s,color .15s}
+.chips.chipped .chip{opacity:1;transform:none}
+
+/* Fade-in for avatar orbit wrap */
+@keyframes avatarIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
+.avatar-orbit-wrap{animation:avatarIn .9s cubic-bezier(.22,1,.36,1) .3s both}
+
+/* ── HERO ── */
+.hero{
+  position:relative;
+  padding:52px 0 48px 52px;border-bottom:1px solid var(--border);
+  background:radial-gradient(1200px 440px at 80% -10%,var(--accent-soft),transparent 70%);
+  overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;width:100%;margin-right:-60px}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;
+  color:var(--vio-2);background:var(--accent-soft);border:1px solid var(--border-2);
+  padding:6px 14px;border-radius:999px;margin-bottom:22px;
+}
+.pulse-dot{position:relative;width:8px;height:8px}
+.pulse-dot i{position:absolute;inset:0;border-radius:50%;background:var(--vio-2)}
+.pulse-dot i:first-child{animation:ping 1.8s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ping{75%,100%{transform:scale(2.4);opacity:0}}
+.hero-label{font-family:var(--mono);font-size:13px;color:var(--tx-2);margin-bottom:8px}
+.hero-label b{color:var(--vio-2)}
+h1.hero-title{
+  font-family:var(--disp);font-weight:700;font-size:clamp(38px,5.5vw,68px);
+  line-height:1.02;letter-spacing:-.025em;color:var(--tx);
+}
+h1.hero-title .dim{color:var(--tx-3)}
+.hero-blurb{font-size:16px;color:var(--tx-2);max-width:540px;line-height:1.75;margin-top:18px}
+.hero-blurb b{color:var(--tx);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 22px;border-radius:10px;
+  font-family:var(--mono);font-size:13px;font-weight:600;cursor:pointer;transition:.2s;
+  border:1px solid transparent;text-decoration:none;white-space:nowrap;
+}
+.btn-primary{background:var(--vio);color:#fff;box-shadow:0 8px 28px -8px var(--vio)}
+.btn-primary:hover{background:var(--vio-2);transform:translateY(-2px)}
+.btn-ghost{background:var(--panel);color:var(--tx);border-color:var(--border-2)}
+.btn-ghost:hover{border-color:var(--vio);color:var(--vio-2)}
+.socials{display:flex;gap:9px}
+.soc{
+  width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  border:none;color:#fff;
+  transition:.18s;text-decoration:none;box-shadow:0 2px 8px -3px rgba(0,0,0,.4);
+}
+.soc:hover{filter:brightness(1.15);transform:translateY(-2px);box-shadow:0 6px 18px -4px rgba(0,0,0,.45)}
+.soc svg{width:18px;height:18px;fill:currentColor}
+
+/* ── AVATAR CARD ── */
+.avatar-card{position:relative;width:290px;flex:none}
+.avatar-glow{
+  position:absolute;inset:-14px;border-radius:22px;
+  background:linear-gradient(150deg,var(--vio),var(--cyan));
+  opacity:.3;filter:blur(28px);
+}
+.avatar-frame{
+  position:relative;border-radius:16px;overflow:hidden;
+  border:1px solid var(--border-2);background:var(--panel);
+}
+.avatar-bar{
+  display:flex;align-items:center;gap:7px;padding:8px 12px;
+  background:var(--bg-2);border-bottom:1px solid var(--border);
+  font-family:var(--mono);font-size:10px;color:var(--tx-3);
+}
+.avatar-bar .dots{margin-right:3px}
+.avatar-bar .dot{width:9px;height:9px}
+.avatar-img{
+  width:100%;aspect-ratio:1/1.12;background-size:cover;background-position:center top;
+}
+.avatar-meta{
+  position:absolute;left:10px;right:10px;bottom:10px;
+  display:flex;align-items:center;gap:10px;padding:11px 12px;
+  border-radius:12px;background:rgba(11,14,22,.6);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.08);
+}
+.avatar-meta .vrf{
+  width:36px;height:36px;border-radius:9px;flex:none;
+  background:linear-gradient(135deg,var(--vio),var(--cyan));
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.avatar-meta .vrf svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.avatar-meta b{color:#fff;font-size:12.5px;display:block}
+.avatar-meta span{color:#9aa4b6;font-size:10.5px;font-family:var(--mono)}
+
+/* ── ORBIT RINGS ── */
+.avatar-orbit-wrap{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  flex:none;width:580px;height:580px;
+}
+.o-ring{position:absolute;inset:0;pointer-events:none}
+.o-item{
+  position:absolute;top:50%;left:50%;width:0;height:0;
+  pointer-events:auto;
+}
+.o-ring-out .o-item{--r:300px;animation:o-cw 24s linear infinite var(--ad,0s)}
+.o-ring-in  .o-item{--r:240px;animation:o-ccw 17s linear infinite var(--ad,0s)}
+.o-ic{
+  position:absolute;
+  top:calc(-1 * var(--r,200px));
+  left:0;
+  transform:translateX(-50%) translateY(-50%);
+  display:inline-flex;align-items:center;gap:5px;
+  padding:5px 11px;border-radius:20px;
+  font-family:var(--mono);font-size:10.5px;font-weight:600;
+  white-space:nowrap;
+  border:1px solid color-mix(in srgb,var(--c,#8b5cf6) 35%,transparent);
+  background:color-mix(in srgb,var(--c,#8b5cf6) 10%,var(--panel));
+  color:color-mix(in srgb,var(--c,#8b5cf6) 95%,#fff);
+  box-shadow:0 2px 10px -3px color-mix(in srgb,var(--c,#8b5cf6) 30%,transparent);
+  backdrop-filter:blur(8px);cursor:default;
+}
+.o-dot{width:6px;height:6px;border-radius:50%;background:var(--c,#8b5cf6);flex:none}
+.o-logo{width:13px;height:13px;flex:none;fill:currentColor;display:block}
+.o-ring-out .o-ic{animation:o-ccw-ic 24s linear infinite var(--ad,0s)}
+.o-ring-in  .o-ic{animation:o-cw-ic  17s linear infinite var(--ad,0s)}
+@keyframes o-cw   {to{transform:rotate( 360deg)}}
+@keyframes o-ccw  {to{transform:rotate(-360deg)}}
+@keyframes o-ccw-ic{to{transform:translateX(-50%) translateY(-50%) rotate(-360deg)}}
+@keyframes o-cw-ic {to{transform:translateX(-50%) translateY(-50%) rotate( 360deg)}}
+.avatar-orbit-wrap:hover .o-item,
+.avatar-orbit-wrap:hover .o-ic{animation-play-state:paused}
